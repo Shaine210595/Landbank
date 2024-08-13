@@ -5,13 +5,6 @@
 <h2>🚀 Demo</h2>
  https://my-e-bank-1.onrender.com/
 
-
-<h2>Project Screenshots:</h2>
-
-<img src="https://mkwebdev.onrender.com/images/e-bank.webp" alt="project-screenshot" width="100%" height="100%/">
-
-  
-  
 <h2>🧐 Features</h2>
 
 Here're some of the project's best features:
