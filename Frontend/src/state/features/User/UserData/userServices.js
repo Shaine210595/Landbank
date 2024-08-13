@@ -7,7 +7,7 @@ const API_URL =
 
 const API_URL_REQUEST =
   process.env.NODE_ENV === "production"
-    ? "https://ebank-2t3r.onrender.com/api/request/create"
+    ? "https://my-e-bank.onrender.com/api/request/create"
     : "http://localhost:5000/api/request/create";
 
 //Get User
