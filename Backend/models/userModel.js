@@ -39,6 +39,13 @@ const userSchema = new mongoose.Schema(
     password: {
       type: String,
       required: [true, "Please Type A Password!"],
+      validate:{
+        validator: function (v) {
+          let regex = "^(?=[A-Za-z\d!@#$%^&*]{8,}$)(?=.*[a-z])(?=.*[A-Z])(?=.*\d)(?=.*[!@#$%^&*]).*$";
+          return regex.test(v);
+        },
+        message:"Password does not meet the required criteria",
+      }
     },
     phone: {
       type: Number,
@@ -46,7 +53,7 @@ const userSchema = new mongoose.Schema(
       unique: true,
       validate: {
         validator: function (v) {
-          let regex = new RegExp("^(1)[0-2,5]{1}[0-9]{8}");
+          let regex = new RegExp("^[0-9]{10}$");
           return regex.test(v) && v.toString().length === 10;
         },
         message: "Please Enter A Valid EGY Phone Number!",
@@ -61,7 +68,7 @@ const userSchema = new mongoose.Schema(
       required: [true, "Please Type A Zip/Postal Code!"],
       validate: {
         validator: function (v) {
-          let regex = new RegExp("^[0-9]{5}$");
+          let regex = new RegExp("^[0-9]{6}$");
           return regex.test(v);
         },
         message: "Please Enter A Valid Zip/Postal Code",
