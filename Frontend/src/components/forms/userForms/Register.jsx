@@ -184,7 +184,6 @@ export default function Register() {
           </label>
 
           <input
-            type="password"
             name="password"
             defaultValue={password}
             onChange={(e) =>
@@ -204,7 +203,6 @@ export default function Register() {
           </label>
 
           <input
-            type="password"
             name="repeat_password"
             defaultValue={repeatPassword}
             onChange={(e) =>
@@ -224,7 +222,7 @@ export default function Register() {
             htmlFor="phone"
             className="w-full inline-block font-semibold mb-4 p-2 text-gray-800 border-b-4 border-blue-800 rounded shadow bg-blue-200"
           >
-            Phone Number Ex:-(01008878980)
+            Phone Number Ex:-(9999955555)
           </label>
 
           <input
