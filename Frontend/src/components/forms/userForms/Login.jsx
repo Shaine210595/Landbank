@@ -17,7 +17,7 @@ export default function Login() {
   });
 
   const { email, password, msg } = formInputs;
-
+  const [showPassword, setShowPassword] = useState(false);
   const navigate = useNavigate();
 
   const dispatch = useDispatch();
@@ -84,7 +84,7 @@ export default function Login() {
             Password
           </label>
           <input
-            type="password"
+            type={showPassword ? "text" : "password"}
             name="password"
             className="block w-full px-3 py-1.5 text-base font-normal text-gray-700 bg-white bg-clip-padding border border-solid border-gray-300 rounded transition ease-in-out m-0 focus:text-gray-700 focus:bg-white focus:border-blue-800 focus:outline-none"
             defaultValue={password}
@@ -94,6 +94,15 @@ export default function Login() {
             placeholder="Enter Your Password"
             required
           />
+          <div className="flex items-center mt-2">
+            <input
+              type="checkbox"
+              id="showPassword"
+              checked={showPassword}
+              onChange={() => setShowPassword(!showPassword)}
+              className="mr-1"
+            /> Show Password
+          </div>
         </div>
         <div className="flex justify-between items-center mb-6">
         <a
