@@ -43,7 +43,7 @@ export const InputsValidator = ({ nameInput = null, passwordInput = null }) => {
         } text-xs md:text-sm font-semibold px-2 my-4`}
       >
         <p>Password Must:-</p>
-        <p>* Be 8 characters or longer.</p>
+        <p>* Be 12 characters or longer.</p>
         <p>* Contain at least 1 lowercase alphabetical character.[a-z]</p>
         <p>* Contain at least 1 uppercase alphabetical character.[A-Z]</p>
         <p>* Contain at least 1 numeric character.[0-9]</p>
