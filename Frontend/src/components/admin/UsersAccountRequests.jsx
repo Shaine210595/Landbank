@@ -149,10 +149,10 @@ const UsersAccountRequests = ({ accountRequestsList }) => {
           scope="row"
           className="p-2 text-gray-900 whitespace-nowrap  border-x-2 text-center"
         >
-          {new Intl.NumberFormat("ar-EG", {
+          {new Intl.NumberFormat("en-IN", {
             style: "currency",
-            currency: "EGP",
-          }).format(request.initial_balance)}
+            currency: "INR",
+           }).format(request.initial_balance)}
         </th>
 
         {/* Decline request */}
