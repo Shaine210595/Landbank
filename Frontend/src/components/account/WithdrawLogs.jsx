@@ -31,10 +31,10 @@ export const WithdrawLogs = () => {
           <FaMoneyBillWave className="inline-block mr-2" />
           Amount:
           <span className="ml-auto md:mx-2 p-2 text-white bg-green-500 rounded">
-            {new Intl.NumberFormat("ar-EG", {
-              style: "currency",
-              currency: "EGP",
-            }).format(log.withdrawed_amount)}
+            {new Intl.NumberFormat("en-IN", {
+            style: "currency",
+            currency: "INR",
+           }).format(log.withdrawed_amount)}
           </span>
         </p>
       </li>
@@ -62,7 +62,7 @@ export const WithdrawLogs = () => {
       <PaginationWithdrawList
         withdrawLogs={withdrawLogs.slice(0).reverse()}
         withdrawLog={withdrawLog}
-        rowsPerPage={10}
+        rowsPerPage={5}
       />
     </div>
   );
