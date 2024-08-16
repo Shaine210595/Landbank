@@ -123,8 +123,8 @@ export default function UpdateUser() {
             <span className="flex items-center flex-col md:flex-row gap-2 text-sm md:text-base  text-blue-700 mb-2 font-medium">
               <FcInfo size={27} />
               <span>
-                If you DO NOT want to change password, just type it for all
-                password field.
+                If you DO NOT want to change password, type the current password in all the 
+                password fields.
               </span>
             </span>
             <input
@@ -201,12 +201,16 @@ export default function UpdateUser() {
               id="phone"
               className="block w-full px-3 py-1.5 text-base font-normal text-gray-700 bg-white bg-clip-padding border border-solid border-gray-300 rounded transition ease-in-out m-0 focus:text-gray-700 focus:bg-white focus:border-blue-600 focus:outline-none"
               value={"0" + phone}
-              onChange={(e) =>
+              onChange={(e) =>{
+                const inputPhone = e.target.value;
+                const formattedPhone = inputPhone.startsWith("0")
+                  ? inputPhone.replace(/^0+/, "") // remove leading zeros
+                  : inputPhone;
                 setFromInputs({
                   ...fromInputs,
-                  phone: e.target.value,
+                  phone: formattedPhone,
                 })
-              }
+              }}
               placeholder="type your phone number"
               required
             />
