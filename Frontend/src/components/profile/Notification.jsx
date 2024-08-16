@@ -112,10 +112,10 @@ shadow transition-all ease-in-out duration-300"
             <p className="mt-1 text-sm font-semibold">
               New Balance Transfered:-
               <span className="underline underline-offset-2 text-blue-900 ml-1">
-                {new Intl.NumberFormat("ar-EG", {
+                {new Intl.NumberFormat("en-IN", {
                   style: "currency",
-                  currency: "EGP",
-                }).format(notification.data[0].transfered_Amount)}
+                  currency: "INR",
+                  }).format(notification.data[0].transfered_Amount)}
               </span>
             </p>
             <p className="mt-1 text-sm font-semibold">
@@ -133,9 +133,9 @@ shadow transition-all ease-in-out duration-300"
             <p className="mt-1 text-sm font-semibold">
               Your Initial Balance Was:-
               <span className="underline underline-offset-2 text-blue-900 ml-1">
-                {new Intl.NumberFormat("ar-EG", {
-                  style: "currency",
-                  currency: "EGP",
+                {new Intl.NumberFormat("en-IN", {
+                    style: "currency",
+                  currency: "INR",
                 }).format(notification.data[0].initial_balance)}
               </span>
             </p>
