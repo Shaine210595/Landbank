@@ -36,10 +36,10 @@ export const Withdraw = () => {
 
     if (isSuccess) {
       setMsg(
-        `You Have Withdrawed ${new Intl.NumberFormat("ar-EG", {
-          style: "currency",
-          currency: "EGP",
-        }).format(withdrawAmount)} Successfully!`
+        `You Have Withdrawed ${new Intl.NumberFormat("en-IN", {
+            style: "currency",
+            currency: "INR",
+          }).format(withdrawAmount)} Successfully!`
       );
     }
   }, [isError, isSuccess, message, account, msg]);
