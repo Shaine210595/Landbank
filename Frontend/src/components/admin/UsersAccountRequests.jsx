@@ -246,7 +246,7 @@ const UsersAccountRequests = ({ accountRequestsList }) => {
           tableRow={tableRow}
           tableHeader={tableHeader}
           tableBodyData={filteredRequests}
-          rowsPerPage={20}
+          rowsPerPage={5}
         />
       )}
 
