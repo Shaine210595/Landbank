@@ -265,7 +265,7 @@ export const UsersListControl = ({ usersList }) => {
           tableRow={tableRow}
           tableHeader={tableHeader}
           tableBodyData={filteredUsers}
-          rowsPerPage={20}
+          rowsPerPage={5}
         />
       )}
 
