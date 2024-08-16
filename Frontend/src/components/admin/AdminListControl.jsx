@@ -215,7 +215,7 @@ const AdminListControl = ({ adminsList }) => {
           tableRow={tableRow}
           tableHeader={tableHeader}
           tableBodyData={filteredAdmins}
-          rowsPerPage={20}
+          rowsPerPage={5}
         />
       )}
 
