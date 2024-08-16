@@ -74,7 +74,7 @@ export const OutgoingTransactions = () => {
       <PaginationOutgoingList
         outgoingTransactions={outgoing.slice(0).reverse()}
         outgoingTransaction={outgoingTransaction}
-        rowsPerPage={10}
+        rowsPerPage={5}
       />
     </div>
   );
