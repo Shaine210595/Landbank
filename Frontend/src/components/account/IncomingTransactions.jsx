@@ -42,10 +42,10 @@ export const IncomingTransactions = () => {
           <FaMoneyBillWave className="inline-block mr-2" />
           Amount:
           <span className="ml-auto md:mx-2 p-2 text-white bg-green-500 rounded">
-            {new Intl.NumberFormat("ar-EG", {
-              style: "currency",
-              currency: "EGP",
-            }).format(transaction.balance_transfered)}
+            {new Intl.NumberFormat("en-IN", {
+            style: "currency",
+            currency: "INR",
+           }).format(transaction.balance_transfered)}
           </span>
         </p>
       </li>
@@ -73,7 +73,7 @@ export const IncomingTransactions = () => {
       <PaginationIncomingList
         incomingTransactions={incoming.slice(0).reverse()}
         incomingTransaction={incomingTransaction}
-        rowsPerPage={10}
+        rowsPerPage={5}
       />
     </div>
   );
