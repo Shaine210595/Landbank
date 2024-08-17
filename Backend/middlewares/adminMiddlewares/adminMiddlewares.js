@@ -9,7 +9,7 @@ const validatePassword = (req, res, next) => {
     return res.status(400).send("empty body request");
 
   let regex = new RegExp(
-    "^(?=.*[a-z])(?=.*[A-Z])(?=.*[0-9])(?=.*[!@#$%^&*])(?=.{12,})"
+    "^(?=.*[a-z])(?=.*[A-Z])(?=.*[0-9])(?=.*[!@#$%^&*])(?=.{8,})"
   );
   /*
       (?=.*[a-z])>>The string must contain at least 1 lowercase alphabetical character
