@@ -243,7 +243,7 @@ export default function Register() {
             htmlFor="postal"
             className="w-full inline-block font-semibold mb-4 p-2 text-gray-800 border-b-4 border-blue-800 rounded shadow bg-blue-200"
           >
-            Postal Code Ex:-(12345)
+            Postal Code Ex:-(123456)
           </label>
 
           <input
