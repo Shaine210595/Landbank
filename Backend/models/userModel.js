@@ -39,13 +39,6 @@ const userSchema = new mongoose.Schema(
     password: {
       type: String,
       required: [true, "Please Type A Password!"],
-      validate:{
-        validator: function (v) {
-          let regex = /^(?=.*[a-z])(?=.*[A-Z])(?=.*\d)(?=.*[!@#$%^&*])[A-Za-z\d!@#$%^&*]{8,}$/;
-          return regex.test(v);
-        },
-        message:"Password does not meet the required criteria",
-      }
     },
     phone: {
       type: Number,
