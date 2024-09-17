@@ -1,5 +1,4 @@
-import React from "react";
-import { useState, useEffect } from "react";
+import React, { useState, useEffect } from "react";
 import { FcCurrencyExchange } from "react-icons/fc";
 import { RiLoginCircleFill } from "react-icons/ri";
 import { useDispatch, useSelector } from "react-redux";
@@ -8,6 +7,8 @@ import { login } from "../../../state/features/User/Auth/authSlice";
 import FormButton from "../../shared/FormButton";
 import { Logo } from "../../shared/Logo";
 import MessagesContainer from "../../shared/MessagesContainer";
+import { ToastContainer, toast } from "react-toastify";
+import "react-toastify/dist/ReactToastify.css";
 
 export default function Login() {
   const [formInputs, setFormInputs] = useState({
@@ -19,27 +20,44 @@ export default function Login() {
   const { email, password, msg } = formInputs;
   const [showPassword, setShowPassword] = useState(false);
   const navigate = useNavigate();
-
   const dispatch = useDispatch();
 
   const { user, isError, isSuccess, isLoading, message } = useSelector(
     (state) => state.userAuth
   );
 
+  const testUserCredentials = {
+    email: "user1@user1.com",
+    password: "@aA123456789",
+  };
+
   useEffect(() => {
+    toast.info(
+      `Use Email: ${testUserCredentials.email} and Password: ${testUserCredentials.password} to check the website!`,
+      {
+        position: "bottom-right",
+        autoClose: 10000,
+        hideProgressBar: false,
+        closeOnClick: true,
+        pauseOnHover: true,
+        draggable: true,
+        progress: undefined,
+      }
+    );
+
     if (isError) {
       setFormInputs({ ...formInputs, msg: message });
     }
 
     if (user) {
-      setFormInputs({ ...formInputs, msg: "Login Succesfully" });
+      setFormInputs({ ...formInputs, msg: "Login Successfully" });
       navigate("/");
     }
   }, [isError, message, user, msg]);
 
   const handleSubmit = async (e) => {
     e.preventDefault();
-    //set msg to none first
+    // Set msg to none first
     setFormInputs({ ...formInputs, msg: "" });
 
     const userData = {
@@ -101,42 +119,38 @@ export default function Login() {
               checked={showPassword}
               onChange={() => setShowPassword(!showPassword)}
               className="mr-1"
-            /> Show Password
+            />{" "}
+            Show Password
           </div>
         </div>
         <div className="flex justify-between items-center mb-6">
-        <a
-          href="/admins/login"
-          className="text-blue-600 hover:text-blue-700 focus:text-blue-700 transition duration-200 ease-in-out " 
-        >
-        Admin Panel
-        </a>
-        <a
-          href="#"
-          className="text-blue-600 hover:text-blue-700 focus:text-red-700 transition duration-200 ease-in-out"
-        >
-         Forgot password?
-        </a>
+          <a
+            href="/admins/login"
+            className="text-blue-600 hover:text-blue-700 focus:text-blue-700 transition duration-200 ease-in-out"
+          >
+            Admin Panel
+          </a>
+          <a
+            href="#"
+            className="text-blue-600 hover:text-blue-700 focus:text-red-700 transition duration-200 ease-in-out"
+          >
+            Forgot password?
+          </a>
         </div>
-        
-        {/*Request Status and Errors*/}
+
+        {/* Request Status and Errors */}
         {(isError || isSuccess) && (
-          <MessagesContainer
-            msg={msg}
-            isSuccess={isSuccess}
-            isError={isError}
-          />
+          <MessagesContainer msg={msg} isSuccess={isSuccess} isError={isError} />
         )}
 
-        {/*form button */}
+        {/* form button */}
         <FormButton
           text={{ loading: "Processing", default: "Login" }}
           isLoading={isLoading}
           icon={<RiLoginCircleFill className="mb-[-2px] ml-1" size={27} />}
         />
 
-        {/*Redirect for Register */}
-
+        {/* Redirect for Register */}
         <p className="text-gray-800 mt-6 text-center">
           Not a Client?
           <Link
@@ -147,6 +161,8 @@ export default function Login() {
           </Link>
         </p>
       </form>
+      {/* Toast container */}
+      <ToastContainer />
     </div>
   );
 }
