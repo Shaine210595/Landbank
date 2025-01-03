@@ -1,17 +1,15 @@
-<h1 id="title" align="center">MERN-E-Banking-System</h1>
+
 
 <p id="description">This Full Stack MERN Application is a comprehensive E-Bank system that allows users to create and manage their own secure online bank accounts. With this system users can easily perform common banking tasks such as depositing withdrawing and transferring money at any time. Additionally the application features an intuitive admin dashboard that enables administrators to efficiently manage user account requests and bank account statuses with ease. Whether you're a user looking for a convenient and secure way to manage your finances or an administrator seeking a powerful tool to streamline your workflow this application is the perfect solution.</p>
 
 <h2>🚀 Demo</h2>
- https://my-e-bank-1.onrender.com/
+ https://mashaine.net
 
-<h2>🧐 Features</h2>
 
 Here're some of the project's best features:
 
 *   Full Stack MERN Application (MongoDB Express.js React Node.js)
-*   Secure user authentication and authorization using JSON Web Tokens (JWT)
-*   User account creation and management (Deposit Withdraw and Transfer)
+*   Secure user authentication and authorization using JSON Web Tokens
 *   Admin dashboard for managing user account requests and bank account statuses
 *   Responsive design using Tailwindcss for compatibility with a range of devices
 *   Efficient and intuitive user interface for ease of use
@@ -20,7 +18,7 @@ Here're some of the project's best features:
 
 <h3> Forgot Password Feature </h3>
 
-<p>In the next version of the application, I plan to implement a "Forgot Password" feature to enhance user experience and security. This feature will allow users to reset their passwords if they forget them.
+
 
 Planned Implementation Details:
 
@@ -33,28 +31,9 @@ Planned Implementation Details:
 </p>
 
 
-### Accessing The Admin Dashboard:-
+### Accessing The Admin Dashboard: the http;//www.facebook.com mashaine roldan austria
 
-One can use the route ``"/admins/login"`` to log in to the admin's dashboard. However, you will need a registered admin/owner account in the database before you can do so. You can manually add a new admin document into the MongoDB database admins collection with the role of "owner". Once you have created the account and logged in with the credentials, you can add other admins through the admin's dashboard.
+""land bank""
 
-### Getting Started
 
-<p>1. install (Frontend & Backend) dependencies</p>
-
-for backend:-
-```
-npm insatll
-```
-
-for frontend:-
-```
-cd Frontend
-npm insatll
-```
-
-<p>2. run the server</p>
-
-```
-cd ..
-npm run both
-```
+One can use the to log in to the admin's dashboard. However, you will need a registered admin/owner account in the database before you can do so. You can manually add a new admin document into the MongoDB database admins collection with the role of "owner". Once you have created the account and logged in with the credentials, you can add other admins through the admin's*
